@@ -12,68 +12,81 @@
         }
     </style>
     <style>
-    .loader-body {
-        background-color: #1b2832;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-    }
-    .loader {
-        width: 65px;
-        aspect-ratio: 1;
-        position: relative;
-      }
-      .loader:before,
-      .loader:after {
-        content: "";
-        position: absolute;
-        border-radius: 50px;
-        box-shadow: 0 0 0 3px inset #fff;
-        animation: l4 2.5s infinite;
-      }
-      .loader:after {
-        animation-delay: -1.25s;
-      }
-      @keyframes l4 {
-        0% {
-          inset: 0 35px 35px 0;
+        #loader-body {
+            background-color: #1b2832;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
         }
-        12.5% {
-          inset: 0 35px 0 0;
+
+        .loader {
+            width: 65px;
+            aspect-ratio: 1;
+            position: relative;
         }
-        25% {
-          inset: 35px 35px 0 0;
+
+        .loader:before,
+        .loader:after {
+            content: "";
+            position: absolute;
+            border-radius: 50px;
+            box-shadow: 0 0 0 3px inset #fff;
+            animation: l4 2.5s infinite;
         }
-        37.5% {
-          inset: 35px 0 0 0;
+
+        .loader:after {
+            animation-delay: -1.25s;
         }
-        50% {
-          inset: 35px 0 0 35px;
+
+        @keyframes l4 {
+            0% {
+                inset: 0 35px 35px 0;
+            }
+
+            12.5% {
+                inset: 0 35px 0 0;
+            }
+
+            25% {
+                inset: 35px 35px 0 0;
+            }
+
+            37.5% {
+                inset: 35px 0 0 0;
+            }
+
+            50% {
+                inset: 35px 0 0 35px;
+            }
+
+            62.5% {
+                inset: 0 0 0 35px;
+            }
+
+            75% {
+                inset: 0 0 35px 35px;
+            }
+
+            87.5% {
+                inset: 0 0 35px 0;
+            }
+
+            100% {
+                inset: 0 35px 35px 0;
+            }
         }
-        62.5% {
-          inset: 0 0 0 35px;
-        }
-        75% {
-          inset: 0 0 35px 35px;
-        }
-        87.5% {
-          inset: 0 0 35px 0;
-        }
-        100% {
-          inset: 0 35px 35px 0;
-        }
-      }</style>
+    </style>
     </style>
 </head>
 
 <body>
     <!-- <div id="app"></div> -->
-    
-    <div class="loader-body">
+
+    <div id="loader-body">
         <h1>Almost there... Hang tight!</h1>
         <div class="loader"></div>
     </div>

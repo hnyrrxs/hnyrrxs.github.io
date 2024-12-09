@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { PortfolioPage } from './pages/Portfolio';
+import { App } from './pages/App';
 
-const rootElement = document.getElementById('app');
-if (rootElement) {
-  const root = createRoot(rootElement);
-  root.render(<PortfolioPage />);
-}
+window.onload = async () => {
+  // configure store here
+  const rootElement = document.getElementById('app');
+  if (rootElement) {
+    const root = createRoot(rootElement);
+    root.render(<App />);
+  }
+};
